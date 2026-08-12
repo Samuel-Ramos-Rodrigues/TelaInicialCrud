@@ -1,0 +1,68 @@
+﻿@model IEnumerable<TelaInicialCrud.Models.Projeto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Crianção</h1>
+
+<div class="btn btn-success">
+<p>
+    <a class=" btn-outline-secondary" asp-action="Create">Criar Projeto</a>
+</p>
+
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeProjeto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.valor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataInicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataFinal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuantPessoas)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeProjeto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.valor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataInicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataFinal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantPessoas)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdProjeto">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdProjeto">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdProjeto">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
