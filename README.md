@@ -280,7 +280,7 @@ Este projeto foi desenvolvido com o propósito de praticar e compreender:
 
 ### Desenvolvedor
 
-**Arthur Francisco Santos Gomes Barreto**
+**Samuel Túlio Ramos Rodrigues**
 
 ---
 
